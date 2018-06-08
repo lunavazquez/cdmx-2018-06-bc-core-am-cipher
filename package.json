@@ -9,9 +9,11 @@
     "pretest": "npm run eslint && npm run htmlhint",
     "test-browser": "opener ./test/index.html",
     "test-node": "nyc mocha ./test/headless.js",
-    "test": "npm run test-node && npm run test-browser"
+    "test": "npm run test-node && npm run test-browser",
+    "dev": "browser-sync start --server src --files src/*.*"
   },
   "dependencies": {
+    "browser-sync": "^2.24.4",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "htmlhint": "^0.9.13",

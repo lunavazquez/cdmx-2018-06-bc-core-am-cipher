@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="encode-message-container">
+      <input id="input-decoded-message" type="text" placeholder="Ingresa tu frase a codificar" size="40">
+      <br>
+      <input id="output-coded-message" type="text" disabled size="40">
+      <br>
+      <button id="encode-btn">Codificar</button>
+    </div>
+
+    <div class="decode-message-container">
+      <input id="input-coded-message" type="text" placeholder="Ingresa tu frase a decodificar" size="40">
+      <br>
+      <input id="output-decoded-message" type="text" disabled size="40">
+      <br>
+      <button id="decode-btn">Decodificar</button>
+    </div>
+  </div>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
