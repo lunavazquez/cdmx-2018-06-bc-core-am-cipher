@@ -5,14 +5,14 @@ const OFFSET = (33 % ALPHABET);
 
 // objeto window cipher
 window.cipher = {
-  // Declarando función dentro de un objeto, (parámetro)
-  encode: function (str) {
-    // define una variable vacia donde se almacenara el mensage codificado
+  // Declarando función dentro de un objeto, (parámetro) ES6
+  encode(str) {
+    // define una variable vacía donde se almacenara el mensage codificado
     let encrypt = '';
     for (let i = 0, l = str.length; i < l; i++) {
       // obtengo el valor ascii de la letra y se almacena en asciiCode
       let asciiCode = str[i].charCodeAt(0);
-      // sumo el valor ascii mas el offset
+      // sumo el valor ascii mas el offset, lo codifica
       let encodedChar = asciiCode + OFFSET;
       // si se pasa del 90, le resto ALPHABET
       if (encodedChar > 90) {
@@ -27,8 +27,9 @@ window.cipher = {
     // regresa el valor de la variable
     return encrypt;
   },
-  // declarando función dentro de un objeto, (parámetro)
-  decode: function (str) {
+
+  // declarando función dentro de un objeto, (parámetro) ES6
+  decode(str) {
     // Declarar función vacia donde se almacenara el mensaje decodificado
     let decrypt = '';
     for (let i = 0, l = str.length; i < l; i++) {
