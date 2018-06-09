@@ -18,7 +18,7 @@ window.cipher = {
       if (encodedChar > 90) {
         encodedChar -= ALPHABET;
         // si es menor a 65 sumar ALPHABET
-      } else if (encodedChar < 65) {
+      } else if (encodedChar < 65 && asciiCode !== 32) {  // codifica el espacio
         encodedChar += ALPHABET;
       }
       // convierte el codigo ASCII a letra
@@ -39,7 +39,7 @@ window.cipher = {
       let decodeChar = asciiCode - OFFSET;
       if (decodeChar > 90) {
         decodeChar -= ALPHABET;
-      } else if (decodeChar < 65) {
+      } else if (decodeChar < 65 && decodeChar !== 32) { // ignora el espacio
         decodeChar += ALPHABET;
       }
       // convertir el código ascii a letra, decodificar.
