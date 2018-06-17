@@ -9,22 +9,23 @@
 
 <body>
   <div id="root">
-    <!-- div para codificar -->
-    <div class="encode-message-container">
-      <input id="input-decoded-message" type="text" placeholder="Ingresa tu frase a codificar" size="40">
-      <br>
-      <input id="output-coded-message" type="text" disabled size="40">
-      <br>
-      <button id="encode-btn">Codificar</button>
+    <!-- switch de cambio de funcionalidad -->
+    <div class="cipher-switch">
+      <p id="encode">Encriptar</p>
+      <p id="decode">Desencriptar</p>
+      <div></div>
+      <span></span>
+    </div>
+    <!-- div para contenedor de mensaje -->
+    <div class="cipher-message-container">
+      <input id="input" type="text" placeholder="Ingresa tu frase a codificar" size="40">
+      <input id="offset" type="number" min="1" step="1">
+      <input id="output" type="text" placeholder="..." size="40" disabled>
     </div>
 
-    <!-- div para decodificar -->
-    <div class="decode-message-container">
-      <input id="input-coded-message" type="text" placeholder="Ingresa tu frase a decodificar" size="40">
-      <br>
-      <input id="output-decoded-message" type="text" disabled size="40">
-      <br>
-      <button id="decode-btn">Decodificar</button>
+    <!-- div contenedor del boton-->
+    <div class="cipher-btn-container">
+      <button id="action">Encriptar</button>
     </div>
   </div>
   <script src="cipher.js"></script>

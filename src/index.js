@@ -1,30 +1,39 @@
 'use strict';
 
-// asociacion del los tags DOM para javascript
-// inputs para codificar el mensaje
-let inputDecodeMessage = document.getElementById('input-decoded-message');
-let outputCodedMessage = document.getElementById('output-coded-message');
-let encodeBtn = document.getElementById('encode-btn');
+// siempre inicia en codificar
+let state = 'DECODE';
 
-// inputs para decodificar el mensaje
-let inputCodedMessage = document.getElementById('input-coded-message');
-let outputDecodeMessage = document.getElementById('output-decoded-message');
-let decodeBtn = document.getElementById('decode-btn');
+// asociacion del los tags DOM para javascript
+// <p> para cipher-switch
+let switchEncode = document.getElementById('encode');
+let switchDecode = document.getElementById('decode');
+
+// inputs para cipher-message-container
+let inputMessage = document.getElementById('input');
+let outputMessage = document.getElementById('output');
+let offsetMessage = document.getElementById('offset');
+
+// cipher-btn-container
+let btn = document.getElementById('action');
 
 // Agregar evento click al botón
 // función declarada en (arrow functio =>)
-encodeBtn.addEventListener('click', (event) => {
-  //a la variable value mandarle el valor de input
-  let value = inputDecodeMessage.value;
-  // el valor del outputMessage va a ser igual al valor que retorne la función encode del objeto window.cipher
-  outputCodedMessage.value = window.cipher.encode(value);
+btn.addEventListener('click', (event) => {
+  console.log(state);
+  let offset = offsetMessage.value % 95;
+  // input va a guardar el valor que el usuario meta
+  let input = inputMessage.value;
+  // output esta vacia por que ahi se guarda el resultado de lo que el usuario haga encriptar o desencriptar
+  let output = '';
+  // si es igual entonces
+  if (state === 'ENCODE') {
+    // si el usuario escoge switch encode, ouput va a ser igual a la funcion encode del window
+    output = window.cipher.encode(input, offset);
+  } else if (state === 'DECODE') {
+    // si el usuario escoge switch decode, ouput va a ser igual a la funcion decode del window
+    output = window.cipher.decode(input, offset);
+  }
+  // el valor de output asocialo a la variable output, para las dos condiciones
+  outputMessage.value = output;
 });
 
-// agregar un evento click al botón
-// función declarada en es6
-decodeBtn.addEventListener('click', (event) => {
-  //a la variable value mandarle el valor de input
-  let value = inputCodedMessage.value;
-  // el valor del output va a ser igual al valor que retorne la función decode del objeto window.cipher
-  outputDecodeMessage.value = window.cipher.decode(value);
-});
