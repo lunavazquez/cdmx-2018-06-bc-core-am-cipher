@@ -1,0 +1,89 @@
+/* reset default browser styles */
+* {
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  z-index: 0;
+}
+
+.root {
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 40%;
+}
+
+h1 {
+  color: blueviolet;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cipher-switch {
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.cipher-switch p {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  width: 45%;
+}
+
+.cipher-switch .line {
+  background: blueviolet;
+  display: block;
+  height: 3px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.cipher-switch .indicator {
+  background: blueviolet;
+  display: block;
+  height: 12px;
+  margin-top: -7px;
+  width: 50%;
+}
+
+.cipher-message-container {
+  text-align: center;
+  width: 100%;
+}
+
+.cipher-message-container input {
+  border-bottom: 2px solid blueviolet;
+  margin: 10px 2%;
+  padding: 10px;
+  text-align: center;
+  width: 60%;
+}
+
+.cipher-message-container input[type="number"] {
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  width: 20%;
+}
+
+.cipher-message-container .action {
+  background: blueviolet;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  line-height: 10px;
+  margin: 30px auto 0px;
+  padding: 12px;
+  width: 50%;
+}
