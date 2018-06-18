@@ -14,9 +14,9 @@
   <div id="root" class="root">
     <h1>Cifrado Cesar</h1>
     <!-- switch de cambio de funcionalidad -->
-    <div class="cipher-switch">
-      <p id="encode">Encriptar</p>
-      <p id="decode">Desencriptar</p>
+    <div id="switch-container" class="cipher-switch encode">
+      <p id="encode">Cifrar</p>
+      <p id="decode">Descifrar</p>
       <div class="line"></div>
       <span class="indicator"></span>
     </div>
@@ -24,8 +24,8 @@
     <div class="cipher-message-container">
       <input id="input" type="text" placeholder="Ingresa tu frase a codificar">
       <input id="offset" type="number" min="1" step="1" placeholder="offset">
-      <input id="output" type="text" disabled>
-      <button id="action" class="action">Encriptar</button>
+      <input id="output" type="text">
+      <button id="action" class="action">Cifrar</button>
     </div>
 
   </div>

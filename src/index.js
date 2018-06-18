@@ -1,10 +1,11 @@
 'use strict';
 
 // siempre inicia en codificar
-let state = 'DECODE';
+var state = 'ENCODE';
 
 // asociacion del los tags DOM para javascript
 // <p> para cipher-switch
+let switchContainer = document.getElementById('switch-container');
 let switchEncode = document.getElementById('encode');
 let switchDecode = document.getElementById('decode');
 
@@ -15,6 +16,25 @@ let offsetMessage = document.getElementById('offset');
 
 // cipher-btn-container
 let btn = document.getElementById('action');
+
+// Cuando el usuario hace click
+switchEncode.addEventListener('click', () => {
+  // cambia la variable global
+  state = 'ENCODE';
+  // cambia la clase que es la barra de desplazamiento
+  switchContainer.className = 'cipher-switch encode';
+  // cambia el nombre del boton
+  btn.innerHTML = 'Cifrar';
+});
+
+switchDecode.addEventListener('click', () => {
+  // cambia la variable global
+  state = 'DECODE'
+  // cambia la clase que es la barra de desplazamiento
+  switchContainer.className = 'cipher-switch decode';
+  // cambia el nombre del boton
+  btn.innerHTML = 'Descifrar';
+});
 
 // Agregar evento click al botón
 // función declarada en (arrow functio =>)

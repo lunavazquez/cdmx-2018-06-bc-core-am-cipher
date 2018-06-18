@@ -11,7 +11,7 @@ window.cipher = {
       .map(ascii => ascii + offset)
       // a cada elemento si es mayor que 126 entonces le restas 95, si no deja el mismo valor.
       // operador ternario dentro de un arrow function
-      .map(asciiOffset => asciiOffset > 126 ? asciiOffset - 95 : asciiOffset)
+      .map(asciiOffset => asciiOffset >= 126 ? asciiOffset - 95 : asciiOffset)
       // al parametro asciiLetter que es un arreglo convierte cada uno de sus elementos en caracteres
       .map(asciiLetter => String.fromCharCode(asciiLetter))
       // une cada caracter por 'nada'
@@ -26,7 +26,7 @@ window.cipher = {
       .map(ascii => ascii - offset)
       // a cada elemento si es mayor que 126 entonces le restas 95, si no deja el mismo valor.
       // operador ternario dentro de un arrow function
-      .map(asciiOffset => asciiOffset < 32 ? asciiOffset + 95 : asciiOffset)
+      .map(asciiOffset => asciiOffset <= 32 ? asciiOffset + 95 : asciiOffset)
       // al parametro asciiLetter que es un arreglo convierte cada uno de sus elementos en caracteres
       .map(asciiLetter => String.fromCharCode(asciiLetter))
       // une cada caracter por 'nada'
