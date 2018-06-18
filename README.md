@@ -119,9 +119,17 @@ producto y cuál fue tu proceso para definir el producto final a nivel de
 experiencia y de interfaz.
 
 * quiénes son los principales usuarios de producto
+
+  - Mi cipher es principalmente para personas con pc y mobile.
+
 * cuáles son los objetivos de estos usuarios en relación con el producto
+
+  - Su objetivo es meter una palabra o frase para que la encripte y nadie sepa lo que esta diciendo, pero a su vez que la gente que use la aplicación pueda desencriptas las palabras que cifraron pero escogiendo la opción de decifrar.
+
 * cómo crees que el producto que estás creando les está resolviendo sus
   problemas
+
+  - Pues hice varias pruebas y hasta el momento me cifra y decifra con mayusculas, minusculas y caracteres especiales, incluyendo el espacio.
 
 Para llevar tus conocimientos a otro nivel en UX:
 
